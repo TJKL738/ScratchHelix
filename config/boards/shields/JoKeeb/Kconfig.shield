@@ -1,5 +1,8 @@
-config SHIELD_JOANNAKEEB_LEFT
-    def_bool $(shields_list_contains,JoKeeb_Left)
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
 
-config SHIELD_JOANNAKEEB_RIGHT
-    def_bool $(shields_list_contains,JoKeeb_Right)
+config SHIELD_HELIX_LEFT
+    def_bool $(shields_list_contains,helix_left)
+
+config SHIELD_HELIX_RIGHT
+    def_bool $(shields_list_contains,helix_right)
