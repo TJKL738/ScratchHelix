@@ -16,16 +16,9 @@ if SHIELD_HELIX_LEFT || SHIELD_HELIX_RIGHT
 config ZMK_SPLIT
     default y
 
-<<<<<<< HEAD:config/boards/shields/JoKeeb/Kconfig.defconfig
 config ZMK_DISPLAY
     default y
-    
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
 
-=======
->>>>>>> parent of 30279cc (TRY 7):config/boards/shields/Helix/Kconfig.defconfig
 if ZMK_DISPLAY
 
 config SSD1306
