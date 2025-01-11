@@ -4,7 +4,7 @@
 if SHIELD_HELIX_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Helix"
+    default "Lovely"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
