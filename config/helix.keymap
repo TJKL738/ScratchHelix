@@ -31,7 +31,7 @@ As such, those are in use within the default layer at this time.*/
         };
 
         Audio_And_Function {
-            display-name = "FUNCTION";
+            display-name = "Function";
             bindings = <
 &kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                       &kp F6             &kp F7      &kp F8      &kp F9      &kp F10               &kp F12
 &none    &none   &none   &none   &none   &none                        &kp C_VOLUME_UP    &kp K_MUTE  &kp UP      &none       &kp C_BRIGHTNESS_INC  &kp PRINTSCREEN
@@ -42,7 +42,7 @@ As such, those are in use within the default layer at this time.*/
         };
 
         Missing {
-            display-name = "MISSING";
+            display-name = "Missing";
             bindings = <
 &none   &none  &none  &none      &none           &none                    &none   &none            &none     &none  &none  &none
 &none   &none  &none  &none      &none           &none                    &none   &none            &none     &none  &none  &none
@@ -64,7 +64,7 @@ As such, those are in use within the default layer at this time.*/
         };
 
         Bluetooth {
-            display-name = "BLUETOOTH";
+            display-name = "Bluetooth";
             bindings = <
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
 &out OUT_TOG  &bt BT_PRV    &bt BT_NXT    &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
