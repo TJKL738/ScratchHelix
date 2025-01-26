@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
+#define ZMK_BEHAVIORS_OMIT_KT
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
