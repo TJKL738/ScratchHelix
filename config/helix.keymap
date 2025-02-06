@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #define ZMK_BEHAVIORS_OMIT_KT
 
 #include <behaviors.dtsi>
@@ -15,6 +16,7 @@
 /* NOTE: At the time of the creation of this keymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
 However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'eisuu' input respectively.
 As such, those are in use within the default layer at this time.*/
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -25,8 +27,8 @@ As such, those are in use within the default layer at this time.*/
 &kp ESCAPE        &kp NUMBER_1  &kp N2   &kp N3    &kp N4  &kp N5                                &kp N6         &kp N7  &kp N8            &kp N9             &kp N0     &kp MINUS
 &kp TAB           &kp Q         &kp W    &kp E     &kp R   &kp T                                 &kp Y          &kp U   &kp I             &kp O              &kp P      &kp BACKSLASH
 &kp CAPSLOCK      &kp A         &kp S    &kp D     &kp F   &kp G                                 &kp H          &kp J   &kp K             &kp L              &kp SEMI   &kp ENTER
-&kp LSHFT         &kp Z         &kp X    &kp C     &kp V   &kp B         &kp EQUAL    &tog 1     &kp N          &kp M   &kp COMMA         &kp PERIOD         &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp GRAVE     &kp SQT  &kp LGUI  &mo 1   &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp BACKSPACE  &mo 2   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &mo 3      &mo 4
+&kp LSHFT         &kp Z         &kp X    &kp C     &kp V   &kp B         &tog 5       &tog 1     &kp N          &kp M   &kp COMMA         &kp PERIOD         &kp SLASH  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp GRAVE     &kp SQT  &kp LGUI  &mo 1   &kp LEFT_ALT  &kp SPACE    &kp SPACE  &kp BACKSPACE  &mo 2   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &mo 3      &mo 4
             >;
         };
 
@@ -44,7 +46,7 @@ As such, those are in use within the default layer at this time.*/
         Missing {
             display-name = "Missing";
             bindings = <
-&none   &none  &none  &none      &none           &none                    &none   &none            &none     &none  &none  &none
+&none   &none  &none  &none      &none           &none                    &none   &none            &none     &none  &none  &kp EQUAL
 &none   &none  &none  &none      &none           &none                    &none   &none            &none     &none  &none  &none
 &none   &none  &none  &kp GRAVE  &kp LBKT        &none                    &none   &kp RBKT         &kp BSLH  &none  &none  &kp SQT
 &trans  &none  &none  &kp TILDE  &kp LEFT_BRACE  &none  &none     &none   &none   &kp RIGHT_BRACE  &kp PIPE  &none  &none  &none
@@ -55,11 +57,11 @@ As such, those are in use within the default layer at this time.*/
         RGB {
             display-name = "RGB";
             bindings = <
-&none  &none  &none  &none  &none       &none                                        &none            &none            &none            &none            &none  &none
-&none  &none  &none  &none  &none       &none                                        &none            &none            &none            &none            &none  &none
-&none  &none  &none  &none  &bl BL_INC  &bl BL_CYCLE                                 &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &none  &none
-&none  &none  &none  &none  &bl BL_DEC  &none         &bl BL_TOG    &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &none  &none
-&none  &none  &none  &none  &none       &none         &none         &none            &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none            &none            &trans &trans
+&none  &none  &none  &none  &none       &none                                        &none            &none            &none            &none            &none   &none
+&none  &none  &none  &none  &none       &none                                        &none            &none            &none            &none            &none   &none
+&none  &none  &none  &none  &bl BL_INC  &bl BL_CYCLE                                 &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &none   &none
+&none  &none  &none  &none  &bl BL_DEC  &none         &bl BL_TOG    &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &none   &none
+&none  &none  &none  &none  &none       &none         &none         &none            &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none            &none            &trans  &trans
             >;
         };
 
@@ -74,24 +76,36 @@ As such, those are in use within the default layer at this time.*/
             >;
         };
 
+        Drawing {
+            bindings = <
+&kp LBKT   &kp RBKT  &none     &kp O     &kp P  &kp BACKSPACE                      &none  &none  &none  &none  &none  &none
+&kp TAB    &none     &kp W     &kp E     &kp R  &none                              &none  &none  &none  &none  &none  &none
+&none      &kp A     &kp S     &kp D     &kp G  &kp J                              &none  &none  &none  &none  &none  &none
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp V  &kp B          &trans       &none  &none  &none  &none  &none  &none  &none
+&kp LCTRL  &none     &kp LBKT  &kp RBKT  &kp M  &kp LALT       &kp SPACE    &none  &none  &none  &none  &none  &none  &none
+            >;
+
+            label = "Drawing";
+        };
+
         Easter {
             display-name = "8====D";
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_TOG  &bt BT_PRV    &bt BT_NXT    &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
 
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <3 4>;
-            then-layer = <5>;
+            then-layer = <6>;
         };
     };
 };
