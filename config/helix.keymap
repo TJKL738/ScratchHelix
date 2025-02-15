@@ -78,11 +78,11 @@ As such, those are in use within the default layer at this time.*/
 
         Drawing {
             bindings = <
-&kp LBKT   &kp RBKT  &none     &kp LBKT  &kp RBKT  &kp BACKSPACE                      &none  &none  &none  &none  &none  &none
-&kp TAB    &kp W     &kp E     &kp R     &kp O     &kp P                              &none  &none  &none  &none  &none  &none
-&none      &kp A     &kp S     &kp D     &kp G     &kp J                              &none  &none  &none  &none  &none  &none
-&kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B          &trans       &none  &none  &none  &none  &none  &none  &none
-&kp LCTRL  &none     &kp LBKT  &kp RBKT  &kp M     &kp LALT       &kp SPACE    &none  &none  &none  &none  &none  &none  &none
+&kp LBKT   &kp RBKT  &none     &none     &kp T  &kp BACKSPACE                      &none  &none  &none  &none  &none  &none
+&kp TAB    &kp W     &kp E     &kp R     &kp O  &kp P                              &none  &none  &none  &none  &none  &none
+&none      &kp A     &kp S     &kp D     &kp G  &kp J                              &none  &none  &none  &none  &none  &none
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp V  &kp B          &trans       &none  &none  &none  &none  &none  &none  &none
+&kp LCTRL  &none     &kp LBKT  &kp RBKT  &kp M  &kp LALT       &kp SPACE    &none  &none  &none  &none  &none  &none  &none
             >;
 
             label = "Drawing";
