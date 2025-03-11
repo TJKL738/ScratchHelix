@@ -4,8 +4,8 @@
 if SHIELD_HELIX_LEFT
 
 config ZMK_KEYBOARD_NAME
-    string "Lovely"
-    default "Lovely"
+    string "Lovely_キツネ"
+    default "Lovely_キツネ"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
